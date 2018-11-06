@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wps:ProcessDescriptions xmlns:wps="http://www.opengis.net/wps/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ows="http://www.opengis.net/ows/1.1"
+	xsi:schemaLocation="http://www.opengis.net/wps/1.0.0 http://schemas.opengis.net/wps/1.0.0/wpsDescribeProcess_response.xsd"
+	xml:lang="en-US" service="WPS" version="1.0.0">
+	<ProcessDescription statusSupported="true"
+		storeSupported="true" wps:processVersion="1.0.0">
+		<ows:Identifier>org.n52.wps.project.riesgos.InterTxt</ows:Identifier>
+		<ows:Title>CIGIDEN process wrapper</ows:Title>
+		<DataInputs>
+			<Input minOccurs="1" maxOccurs="1">
+				<ows:Identifier>input-csv</ows:Identifier>
+				<ows:Title>CSV input</ows:Title>
+				<ComplexData>
+					<Default>
+						<Format>
+							<MimeType>text/csv</MimeType>
+						</Format>
+					</Default>
+					<Supported>
+						<Format>
+							<MimeType>text/csv</MimeType>
+						</Format>
+					</Supported>
+				</ComplexData>
+			</Input>
+		</DataInputs>
+		<ProcessOutputs>
+			<Output>
+				<ows:Identifier>report</ows:Identifier>
+				<ows:Title>report</ows:Title>
+				<LiteralOutput>
+					<ows:DataType ows:reference="xs:string"></ows:DataType>
+				</LiteralOutput>
+			</Output>
+		</ProcessOutputs>
+	</ProcessDescription>
+</wps:ProcessDescriptions>
